@@ -57,7 +57,7 @@ def get_column_names(table_name,db: Session = next(get_db())  ):
 
 
 
-def uploaded_file_data_to_db(datas : list):
+def uploaded_file_data_to_db(datas : list,table_name):
     # Start the timer
     start_time = time.time()
     rows = []
@@ -66,7 +66,7 @@ def uploaded_file_data_to_db(datas : list):
     
     # DB FUNCTIONS 
     db: Session = next(get_db())   # db session for normal function
-    get_column_name = get_column_names('user')
+    get_column_name = get_column_names(table_name)
     
     column_types = get_column_name.get('data')[2].get('column_type')
     column_name = get_column_name.get('data')[0].get('column_name')

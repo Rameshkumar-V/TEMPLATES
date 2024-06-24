@@ -30,10 +30,17 @@ def read_csv_file(file: str,table_name : str):
     labels = get_column_name.get('data')[1].get('label_name')
     columns =  get_column_name.get('data')[0].get('column_name')
     
-    # EXCEL OPERATION
-    excel = pd.read_csv(file,usecols=labels)
-    excel.columns=columns # label to column name
-    rows_as_dicts : dict = excel.to_dict(orient='records')
+    print('LABEL = ',labels)
+    
+    try:
+    
+        # EXCEL OPERATION
+        excel = pd.read_csv(file,usecols=labels)
+        print('excel = ',excel)
+        excel.columns=columns # label to column name
+        rows_as_dicts : dict = excel.to_dict(orient='records')
+    except:
+        pass
     
     return rows_as_dicts
   
@@ -74,7 +81,7 @@ def upload_file(file_type : str, file ,table_name):
 
     if file_type == 'csv':
         response =  read_csv_file(file,table_name) #reading
-        upload_status = uploaded_file_data_to_db(response) # writing
+        upload_status = uploaded_file_data_to_db(response,table_name) # writing
         store_file =  store_file_on_local(upload_status.get('rows'),table_name) #storing
         # DB CONNECTION
         db: Session = next(get_db())
