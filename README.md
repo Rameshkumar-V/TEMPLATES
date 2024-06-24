@@ -36,5 +36,4 @@ The database diagrams can be found in the `diagrams` directory.
 ### Diagram
 ![DB Diagram](./diagrams/Untitled.png)
 
-## Additional Sections
-- Add any additional information or sections that are relevant to your project.
+
