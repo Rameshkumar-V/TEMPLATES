@@ -27,14 +27,14 @@
 The UML diagrams can be found in the `diagrams` directory.
 
 ### Diagram
-![UML Diagram](./diagrams/umldiagram/umldiagram.png)
+![UML Diagram](./diagrams/umldiagram.png)
 
 ## 3. DB Diagram
 
 The database diagrams can be found in the `diagrams` directory.
 
 ### Diagram
-![DB Diagram](./diagrams/dbdiagram/dbdiagram.png)
+![DB Diagram](./diagrams/Untitled.png)
 
 ## Additional Sections
 - Add any additional information or sections that are relevant to your project.
