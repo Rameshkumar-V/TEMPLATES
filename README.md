@@ -3,7 +3,7 @@
 ## 1. Environment Setup
 
 ### Prerequisites
-- List any software, libraries, or tools required for the project.
+- Python, Mysql or Sqlite
 
 ### Installation
 1. Clone the repository:
